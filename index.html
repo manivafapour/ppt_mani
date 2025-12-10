@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <title>آماده‌سازی پاورپوینت معرفی به استاد</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top, #eef2ff, #e5e7eb);
+            color: #111827;
+            min-height: 100vh;
+            padding: 24px 12px 40px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .page {
+            width: 100%;
+            max-width: 1200px;
+        }
+
+        header {
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        header p {
+            font-size: 0.95rem;
+            color: #4b5563;
+        }
+
+        .hint {
+            margin: 16px auto 24px;
+            max-width: 750px;
+            padding: 12px 16px;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.8);
+            border: 1px solid #e5e7eb;
+            font-size: 0.85rem;
+            color: #4b5563;
+        }
+
+        .slides-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 18px;
+        }
+
+        .slide-card {
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 18px;
+            padding: 16px 16px 18px;
+            box-shadow: 0 18px 35px rgba(15, 23, 42, 0.08);
+            border: 1px solid #e5e7eb;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .slide-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .slide-title {
+            font-size: 1rem;
+            font-weight: 700;
+        }
+
+        .slide-badge {
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: #eef2ff;
+            color: #4338ca;
+            white-space: nowrap;
+        }
+
+        .slide-desc {
+            font-size: 0.85rem;
+            color: #6b7280;
+            line-height: 1.6;
+        }
+
+        label {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: #4b5563;
+            margin-bottom: 4px;
+            display: block;
+        }
+
+        input[type="text"],
+        textarea {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid #e5e7eb;
+            padding: 8px 10px;
+            font-size: 0.85rem;
+            font-family: inherit;
+            resize: vertical;
+            min-height: 36px;
+            background: #f9fafb;
+        }
+
+        textarea {
+            min-height: 90px;
+        }
+
+        input:focus,
+        textarea:focus {
+            outline: none;
+            border-color: #6366f1;
+            box-shadow: 0 0 0 1px rgba(99, 102, 241, 0.25);
+            background: #ffffff;
+        }
+
+        .small-hint {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            margin-top: 3px;
+        }
+
+        .section-group {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            margin-top: 4px;
+        }
+
+        footer {
+            margin-top: 30px;
+            font-size: 0.8rem;
+            text-align: center;
+            color: #9ca3af;
+        }
+
+        @media (max-width: 640px) {
+            header h1 {
+                font-size: 1.3rem;
+            }
+            .hint {
+                border-radius: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header>
+        <h1>آماده‌سازی پاورپوینت معرفی خودت به استاد</h1>
+        <p>هر کارت، ایده‌ی یک اسلاید است. داخل باکس‌ها متن را بنویس، بعد کپی کن داخل پاورپوینت.</p>
+    </header>
+
+    <div class="hint">
+        ➊ متن هر بخش را بنویس → ➋ متن را کپی کن در اسلاید پاورپوینت → ➌ بعداً طراحی و عکس را در خود پاورپوینت درست کن.
+    </div>
+
+    <main class="slides-grid">
+
+        <!-- Slide 1: Introduction -->
+        <section class="slide-card">
+            <div class="slide-header">
+                <div class="slide-title">اسلاید ۱ – معرفی کوتاه</div>
+                <div class="slide-badge">Who I am</div>
+            </div>
+            <p class="slide-desc">
+                یک معرفی خیلی کوتاه: نام، مقطع، دانشگاه فعلی و اینکه برای چه پوزیشن/پروگرمی اپلای می‌کنی.
+            </p>
+            <div class="section-group">
+                <label for="intro-title">تیتر اسلاید (مثلاً: About Me)</label>
+                <input id="intro-title" type="text" placeholder="مثلاً: Short Introduction / About Me">
+            </div>
+            <div class="section-group">
+                <label for="intro-text">متن یا بولت پوینت‌ها</label>
+                <textarea id="intro-text" placeholder="- My name is Mani Vafapour, a BSc student in Electrical Engineering (Control) at K. N. Toosi University of Technology.
+- I am applying for the PhD program in ...
+- My main interests: multi-agent systems, reinforcement learning, agentic AI."></textarea>
+                <div class="small-hint">بعداً هر خط را یک bullet در پاورپوینت کن.</div>
+            </div>
+        </section>
+
+        <!-- Slide 2: Education -->
+        <section class="slide-card">
+            <div class="slide-header">
+                <div class="slide-title">اسلاید ۲ – تحصیلات</div>
+                <div class="slide-badge">Education</div>
+            </div>
+            <p class="slide-desc">
+                مدرک فعلی، دانشگاه، معدل، سال‌های تحصیل و درس‌های مهم مرتبط با موضوع استاد.
+            </p>
+            <div class="section-group">
+                <label for="edu-main">خلاصه تحصیلی</label>
+                <textarea id="edu-main" placeholder="- BSc in Electrical Engineering (Control), K. N. Toosi University of Technology, 2021–2026 (expected).
+- GPA: 3.7/4.0 (approx.).
+- Relevant courses: Linear Systems, Optimal Control, Machine Learning, ..."></textarea>
+            </div>
+            <div class="section-group">
+                <label for="edu-extra">نکات مهم (افتخارات، رتبه، ...)</label>
+                <textarea id="edu-extra" placeholder="- Ranked top X% of my class.
+- Received scholarship / awards (if any)."></textarea>
+            </div>
+        </section>
+
+        <!-- Slide 3: Research & Interests -->
+        <section class="slide-card">
+            <div class="slide-header">
+                <div class="slide-title">اسلاید ۳ – علایق پژوهشی</div>
+                <div class="slide-badge">Research Interests</div>
+            </div>
+            <p class="slide-desc">
+                ۳–۵ بولت درباره موضوعاتی که دوست داری روی آن‌ها کار کنی و اینکه چرا به کارهای استاد نزدیک‌اند.
+            </p>
+            <div class="section-group">
+                <label for="research-interests">علایق پژوهشی</label>
+                <textarea id="research-interests" placeholder="- Multi-agent systems and coordination.
+- Optimization-based control and signal processing.
+- Learning-based control (RL, agentic AI) for real systems.
+- Joint radar–communication (DFRC) optimization (if relevant)."></textarea>
+            </div>
+            <div class="section-group">
+                <label for="why-prof">چرا این استاد / این گروه؟</label>
+                <textarea id="why-prof" placeholder="- Your work on ... inspired me because ...
+- I am particularly interested in your papers on ...
+- I believe my background in ... fits well with your current projects in ..."></textarea>
+            </div>
+        </section>
+
+        <!-- Slide 4: Projects & Experience -->
+        <section class="slide-card">
+            <div class="slide-header">
+                <div class="slide-title">اسلاید ۴ – پروژه‌ها و تجربه‌ها</div>
+                <div class="slide-badge">Projects</div>
+            </div>
+            <p class="slide-desc">
+                ۲–۳ پروژه مهم (دانشجویی، تحقیقاتی یا شخصی) که نشان می‌دهد می‌توانی در دکتری/پروژه جدی کار کنی.
+            </p>
+            <div class="section-group">
+                <label for="project-1">پروژه ۱</label>
+                <textarea id="project-1" placeholder="Project title – 1–2 lines about what you did, tools, and the result."></textarea>
+            </div>
+            <div class="section-group">
+                <label for="project-2">پروژه ۲</label>
+                <textarea id="project-2" placeholder="Project title – 1–2 lines about what you did, tools, and the result."></textarea>
+            </div>
+            <div class="section-group">
+                <label for="skills">مهارت‌های کلیدی (skills)</label>
+                <textarea id="skills" placeholder="- Programming: Python, MATLAB, ...
+- Tools: PyTorch / TensorFlow, ROS, ...
+- Other: LaTeX, Linux, Git, ..."></textarea>
+            </div>
+        </section>
+
+        <!-- Slide 5: Goals -->
+        <section class="slide-card">
+            <div class="slide-header">
+                <div class="slide-title">اسلاید ۵ – اهداف و انگیزه</div>
+                <div class="slide-badge">Goals & Motivation</div>
+            </div>
+            <p class="slide-desc">
+                کوتاه توضیح بده در دکتری یا همکاری دقیقاً دنبال چی هستی و در ۵–۱۰ سال آینده خودت را کجا می‌بینی.
+            </p>
+            <div class="section-group">
+                <label for="goals">اهداف کوتاه‌مدت و بلندمدت</label>
+                <textarea id="goals" placeholder="- In the short term, I want to deepen my expertise in ...
+- In the long term, I aim to become a researcher/engineer working on ..."></textarea>
+            </div>
+            <div class="section-group">
+                <label for="fit">چطور می‌توانی به گروه کمک کنی؟</label>
+                <textarea id="fit" placeholder="- I can contribute to your group by ...
+- My background in ... could be useful for your ongoing projects in ..."></textarea>
+            </div>
+        </section>
+
+        <!-- Slide 6: Questions for Professor -->
+        <section class="slide-card">
+            <div class="slide-header">
+                <div class="slide-title">اسلاید ۶ – سوال از استاد</div>
+                <div class="slide-badge">Questions</div>
+            </div>
+            <p class="slide-desc">
+                اگر برای جلسه آنلاین (مصاحبه) پاورپوینت می‌سازی، داشتن ۲–۳ سوال آماده امتیاز مثبت است.
+            </p>
+            <div class="section-group">
+                <label for="questions">سوال‌های پیشنهادی</label>
+                <textarea id="questions" placeholder="- Could you tell me more about the current projects in your group related to ...?
+- How do you usually structure supervision and meetings with your PhD students?
+- Are there particular skills you expect incoming students to already have?"></textarea>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        بعد از پر کردن هر بخش، متن‌ها را در پاورپوینت کپی کن و طراحی اسلایدها را طبق سلیقه‌ی خودت انجام بده.
+    </footer>
+</div>
+</body>
+</html>
