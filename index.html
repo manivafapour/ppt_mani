@@ -3,53 +3,101 @@
 <head>
 <meta charset="UTF-8">
 <title>Mani – Introduction to Prof. Davidson</title>
+
 <style>
     body {
         margin: 0;
         font-family: Arial, sans-serif;
         background: #f5f5f5;
     }
+
     .slide {
         display: none;
         padding: 60px;
         height: 100vh;
         box-sizing: border-box;
     }
+
     .active {
         display: block;
     }
+
+    /* Card Theme */
+    .card {
+        background: white;
+        border-radius: 20px;
+        padding: 40px;
+        width: 85%;
+        margin: 0 auto;
+        height: 80vh;
+        box-shadow: 0px 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .card-header {
+        height: 6px;
+        background: #2F6FED;
+        border-radius: 20px 20px 0 0;
+        margin-bottom: 30px;
+    }
+
+    .card-content {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
     h1 {
-        font-size: 48px;
-        margin-bottom: 10px;
+        font-size: 42px;
         color: #003366;
+        margin-bottom: 15px;
     }
-    h2 {
-        font-size: 32px;
-        margin-bottom: 20px;
-        color: #003366;
-    }
-    p, li {
-        font-size: 22px;
-        line-height: 1.4;
-    }
+
     ul {
-        margin-top: 10px;
+        font-size: 22px;
+        line-height: 1.45;
+        padding-left: 20px;
     }
-    .image-container {
-        text-align: center;
-        margin-top: 30px;
+
+    .left {
+        width: 65%;
     }
-    .image-container img {
-        max-width: 80%;
-        border-radius: 12px;
-        box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+
+    .right {
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+    .logo {
+        width: 110px;
+        border-radius: 10px;
+        margin-bottom: 20px;
+    }
+
+    .side-image {
+        width: 95%;
+        max-height: 380px;
+        border-radius: 20px;
+        object-fit: cover;
+        box-shadow: 0px 8px 22px rgba(0,0,0,0.12);
+    }
+
+    .subtitle-line {
+        width: 120px;
+        height: 3px;
+        background: #d8dee9;
+        margin-bottom: 25px;
+    }
+
+    /* Navigation Buttons */
     .nav {
         position: fixed;
         bottom: 20px;
         left: 50%;
         transform: translateX(-50%);
     }
+
     .btn {
         padding: 12px 24px;
         background: #003366;
@@ -60,6 +108,7 @@
         cursor: pointer;
         border-radius: 6px;
     }
+
     .btn:hover {
         background: #0059b3;
     }
@@ -67,65 +116,123 @@
 </head>
 <body>
 
-<!-- SLIDE 1 – General Intro -->
+<!-- SLIDE 1 — Who I Am -->
 <div class="slide active" id="slide1">
-    <h1>Hi, I'm Mani Vafapour</h1>
-    <h2>Electrical Engineering (Control) – KNTU</h2>
-    <ul>
-        <li>Focused on optimization, control, and intelligent systems</li>
-        <li>GPA ~3.72/4, expected graduation June 2026</li>
-        <li>Research experience in multi-agent systems + RL</li>
-        <li>Interested in optimization-based signal processing & JRC systems</li>
-    </ul>
-</div>
+    <div class="card">
+        <div class="card-header"></div>
 
-<!-- SLIDE 2 — ARAS Research (with image) -->
-<div class="slide" id="slide2">
-    <h1>My Work at ARAS Laboratory</h1>
-    <ul>
-        <li>Built an AI pipeline that processes both medical text and lab images</li>
-        <li>VLM + OCR for biomarker extraction</li>
-        <li>CNN models for image-based disease screening</li>
-        <li>Integrated ML predictors (SVM, XGBoost, MLP)</li>
-        <li>LLM agent orchestrates model selection & workflow</li>
-        <li>System deployed using Django, FastAPI, Celery, Docker</li>
-    </ul>
+        <div class="card-content">
+            <div class="left">
+                <h1>Who I Am</h1>
+                <div class="subtitle-line"></div>
+                <ul>
+                    <li>B.Sc. Electrical Engineering — AI and Robotics (KNTU)</li>
+                    <li>AI Software Engineer at ARAS Robotics & AI Solutions</li>
+                    <li>Experienced in Web Apps, APIs, Deep Learning, Agentic AI, and Information Retrieval</li>
+                    <li>Focused on building real-world AI systems that solve human problems</li>
+                </ul>
+            </div>
 
-    <div class="image-container">
-        <img src="aras_flowchart.png" alt="ARAS System Flowchart">
+            <div class="right">
+                <img src="kntu_logo.png" class="logo">
+                <img src="aras_logo.png" class="logo">
+            </div>
+        </div>
     </div>
 </div>
 
-<!-- SLIDE 3 — Multi-Agent Tools -->
+<!-- SLIDE 2 — About ARAS (Robotic System) -->
 <div class="slide" id="slide3">
-    <h1>Multi-Agent Tools & Reporting</h1>
-    <ul>
-        <li>LLM Doctors Finder for specialist recommendations</li>
-        <li>LLM Drugs Finder + Drugstore Finder</li>
-        <li>LLM Reporter powered by RAG (FAISS + web search)</li>
-        <li>Generates complete, human-readable health reports</li>
-        <li>Designed for automation, scalability, and deployment</li>
-    </ul>
+    <div class="card">
+        <div class="card-header"></div>
+
+        <div class="card-content">
+            <div class="left">
+                <h1>About ARAS</h1>
+                <div class="subtitle-line"></div>
+                <ul>
+                    <li>ARAS develops robotic and AI-powered systems to assist surgeons</li>
+                    <li>Work involves surgical robotics, medical AI, and intelligent automation</li>
+                    <li>My role focuses on embedding IR and LLM agents into medical workflows</li>
+                    <li>Mission: enhance surgical performance with reliable AI assistance</li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <img src="aras_robot.png" class="side-image">
+            </div>
+        </div>
+    </div>
+</div>
+<!-- SLIDE 3 — My Work at ARAS -->
+<div class="slide" id="slide2">
+    <div class="card">
+        <div class="card-header"></div>
+
+        <div class="card-content">
+            <div class="left">
+                <h1>My Work at ARAS</h1>
+                <div class="subtitle-line"></div>
+
+                <ul>
+                    <li>Developed a multi-modal AI pipeline for medical text and lab images</li>
+                    <li>Used VLM + OCR models for biomarker extraction</li>
+                    <li>Integrated ML predictors including SVM, XGBoost, and MLP</li>
+                    <li>Designed LLM-driven agents for workflow orchestration</li>
+                    <li>Built agents for drug checks, doctor recommendations, and reporting</li>
+                </ul>
+            </div>
+
+            <div class="right">
+                <img src="aras_flowchart.png" class="side-image">
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- SLIDE 4 — Why Communication Systems (to fill later) -->
+
+
+
+
+<!-- SLIDE 4 — Full Flowchart -->
 <div class="slide" id="slide4">
-    <h1>Why Communication Systems?</h1>
-    <p>(We will complete this slide together.)</p>
+    <div class="card">
+        <div class="card-header"></div>
+
+        <div class="card-content" style="justify-content:center; align-items:center;">
+            <img src="aras_flowchart.png" class="side-image" style="max-width:85%;">
+        </div>
+    </div>
 </div>
 
-<!-- SLIDE 5 — Closing -->
+
+<!-- SLIDE 5 — LLM + Motor Control System -->
 <div class="slide" id="slide5">
-    <h1>Thank You</h1>
-    <p>I look forward to discussing how I can contribute to your group.</p>
-    <p>Mani Vafapour</p>
+    <div class="card">
+        <div="card-header"></div>
+
+        <div class="card-content" style="align-items: flex-start;">
+            <div class="left" style="width:100%;">
+                <h1>LLM + Motor Control System</h1>
+                <div class="subtitle-line"></div>
+                <ul>
+                    <li>Built a system that converts natural-language commands into motor actions</li>
+                    <li>Includes speech recognition, language parsing, and safety logic</li>
+                    <li>Backend translates intent into deterministic motor commands</li>
+                    <li>Arduino runs a simple closed-loop controller to track target RPM</li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
 
-<!-- Navigation -->
+
+<!-- NAVIGATION -->
 <div class="nav">
     <button class="btn" onclick="prevSlide()">Previous</button>
     <button class="btn" onclick="nextSlide()">Next</button>
 </div>
+
 
 <script>
     let current = 1;
@@ -134,16 +241,17 @@
         document.querySelectorAll('.slide').forEach(s => s.classList.remove('active'));
         document.getElementById(`slide${n}`).classList.add('active');
     }
+
     function nextSlide() {
         if (current < 5) current++;
         showSlide(current);
     }
+
     function prevSlide() {
         if (current > 1) current--;
         showSlide(current);
     }
 
-    // Arrow key navigation
     document.addEventListener("keydown", function(e) {
         if (e.key === "ArrowRight") nextSlide();
         if (e.key === "ArrowLeft") prevSlide();
